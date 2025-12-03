@@ -6,94 +6,26 @@
 
 `CleanWindows` è uno script avanzato che permette di:
 
-* Rimuovere bloatware preinstallato
-* Ridurre telemetria e tracking
-* Pulire file temporanei
-* Ottimizzare servizi come SysMain (Superfetch)
-* Migliorare performance e stabilità
-* Applicare ottimizzazioni specifiche per gaming
-* Ripristinare le modifiche tramite backup automatici
+* Ottimizzare il tuo sistema
+* Backup & Restore (under construction)
+* Manutenzione avanzata (under construction)
+* Strumenti utili (under construction)
 
 Include controllo privilegi amministrativi, backup del registro, salvataggio stato servizi e log dettagliato.
 
 ---
 
-## 📂 Funzionalità principali
-
-### 🔹 Modalità disponibili
-
-All’avvio viene mostrato un menu:
-
-| Modalità           | Descrizione                                                                                             |
-| ------------------ | ------------------------------------------------------------------------------------------------------- |
-| **S – Safe**       | Nessuna modifica invasiva. Solo pulizia file temporanei, privacy sicura e manutenzione.                 |
-| **B – Balanced**   | Consigliata per uso quotidiano: rimozioni moderate, privacy aumentata, servizi non critici ottimizzati. |
-| **A – Aggressive** | Rimuove più app, limita telemetria al minimo, disabilita servizi non indispensabili. Più rischiosa.     |
-| **G – Gaming**     | Ottimizzazioni per latenze, pulizia, power plan ad alte prestazioni, rimozione minima bloatware.        |
-| **R – Restore**    | Ripristina backup, servizi e impostazioni registry ove possibile.                                       |
-| **Q – Quit**       | Esci.                                                                                                   |
+CleanWindows - Script PowerShell modulare per pulizia, ottimizzazione e privacy su Windows. Rimuove bloatware, riduce telemetria, pulisce file temporanei e ottimizza servizi, con modalità Safe / Balanced / Aggressive / Gaming e possibilità di ripristino. Tutto contenuto nella cartella dello script, pronto per utenti non esperti tramite file .bat
 
 ---
 
-## 🔧 Operazioni eseguite dallo script
+| Documenti disponibili  | Link                                   |
+| ---------------------- | -------------------------------------- |
+| Ottimizzazione sistema | [Apri](docs/ottimizzazione-sistema.md) |
+| Backup & Restore       | [Apri](docs/restore.md)                |
+| Manutenzione avanzata  | [Apri](docs/maintenance.md)            |
+| Strumenti utili        | [Apri](docs/tools.md)                  |
 
-### ✔ Controllo amministratore
-
-Lo script verifica se è avviato con privilegi elevati, altrimenti termina.
-
-### ✔ Creazione punto di ripristino
-
-Se la Protezione Sistema è attiva.
-
-### ✔ Backup chiavi di registro
-
-Le principali chiavi modificate vengono salvate in:
-
-```
-dir\data\backup\
-```
-
-### ✔ Salvataggio stato servizi
-
-Viene generato:
-
-```
-services_state.json
-```
-
-con info su StartType e stato al momento della modifica.
-
-### ✔ Rimozione bloatware
-
-In base alla modalità: Safe < Balanced < Aggressive.
-
-### ✔ Privacy / Telemetria
-
-* Disattivazione ricerca web
-* Disattivazione contenuti sponsorizzati
-* Livello telemetria (1 Balanced, 0 Aggressive)
-* Arresto servizi telemetria in Aggressive
-
-### ✔ Ottimizzazioni SSD / SysMain
-
-SysMain può essere disattivato (utile su SSD più lenti).
-
-### ✔ Gaming Tweaks
-
-* Attivazione High Performance (se disponibile)
-* Pulizia minore
-* Privacy bilanciata
-
-### ✔ Pulizia file temporanei
-
-Cancella contenuto di:
-
-* `%TEMP%`
-* `C:\Windows\Temp`
-
-### ✔ Pulizia voci di avvio approvate
-
-Rimuove voci nascoste non necessarie.
 
 ---
 
