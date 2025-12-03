@@ -1,4 +1,4 @@
-name: Release on Tag
+name: Release on Tag (with PAT)
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - 'v*'
 
 permissions:
-  contents: write  # Permette la creazione della release
+  contents: write
 
 jobs:
   release:
@@ -16,10 +16,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Release from tag
+      - name: Release Please
         uses: googleapis/release-please-action@v4
         with:
-          command: github-release
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
           release-type: simple
-          tag: ${{ github.ref_name }}
-          changelog-path: CHANGELOG.md
