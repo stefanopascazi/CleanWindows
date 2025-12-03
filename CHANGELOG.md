@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/stefanopascazi/CleanWindows/compare/v1.1.1...v1.1.2) (2025-12-03)
+
+
+### Bug Fixes
+
+* workflows without create branche ([58f4252](https://github.com/stefanopascazi/CleanWindows/commit/58f4252444cf155bfb424bdabe1330fb74416c5c))
+
 ## [1.1.1](https://github.com/stefanopascazi/CleanWindows/compare/v1.1.0...v1.1.1) (2025-12-03)
 
 
