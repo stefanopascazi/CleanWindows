@@ -3,21 +3,22 @@ name: Release on Tag
 on:
   push:
     tags:
-      - 'v*'     # es: v1.0.0, v2.3.1 ecc.
+      - 'v*'   # Esempio: v1.0.0, v2.3.1
+
+permissions:
+  contents: write   # Necessario per creare la release e aggiornare CHANGELOG
 
 jobs:
-  release:
+  release-please:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Release Please (tag mode)
+      - name: Run release-please (github-release)
         uses: googleapis/release-please-action@v4
         with:
+          command: github-release
           release-type: simple
-          # Forza release-please a usare il tag appena pushato
-          version: ${{ github.ref_name }}
-          # Aggiorna CHANGELOG.md e crea la release
+          tag: ${{ github.ref_name }}
           changelog-path: CHANGELOG.md
