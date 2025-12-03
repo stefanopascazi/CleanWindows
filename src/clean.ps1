@@ -270,7 +270,7 @@ Function Restore-Defaults {
 Function Show-Menu {
     Clear-Host
     Write-Host "==========================================" -ForegroundColor Cyan
-    Write-Host "   WINDOWS PULITO - MENU" -ForegroundColor Cyan
+    Write-Host "   OTTIMIZZAZIONE DI SISTEMA - MENU" -ForegroundColor Cyan
     Write-Host "==========================================" -ForegroundColor Cyan
     Write-Host ""
     Write-Host "S - Safe (solo pulizia sicura, nessuna rimozione d'app o servizi)" -ForegroundColor Yellow
