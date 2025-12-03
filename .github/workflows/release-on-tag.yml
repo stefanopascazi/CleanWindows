@@ -3,19 +3,20 @@ name: Release on Tag
 on:
   push:
     tags:
-      - 'v*'   # Esempio: v1.0.0, v2.3.1
+      - 'v*'
 
 permissions:
-  contents: write   # Necessario per creare la release e aggiornare CHANGELOG
+  contents: write  # Permette la creazione della release
 
 jobs:
-  release-please:
+  release:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Run release-please (github-release)
+      - name: Release from tag
         uses: googleapis/release-please-action@v4
         with:
           command: github-release
