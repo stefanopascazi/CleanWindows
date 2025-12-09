@@ -1,3 +1,3 @@
 @echo off
-PowerShell -NoProfile -ExecutionPolicy Bypass -File "%~dp0src\launcher.ps1"
+PowerShell -NoProfile -ExecutionPolicy Bypass -File "%~dp0src\__init__.ps1"
 pause
