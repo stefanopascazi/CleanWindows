@@ -312,8 +312,8 @@ while ($true) {
             Pause
         }
         "A" {
-            Write-Host "ATTENZIONE: modalità Aggressive può rimuovere app e disabilitare servizi. Vuoi procedere? (S/N)" -ForegroundColor Red
-            $confirmA = Read-Host ""
+            Write-Host "ATTENZIONE: modalità Aggressive può rimuovere app e disabilitare servizi." -ForegroundColor Red
+            $confirmA = Read-Host "Vuoi procedere? (S o N)"
             if ($confirmA.ToUpper() -eq "S") {
                 Log "Selezione: Aggressive"
                 Create-RestorePoint
