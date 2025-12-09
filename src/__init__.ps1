@@ -34,7 +34,7 @@ function Run-Script {
 while ($true) {
     Clear-Host
     Write-Host "==========================================" -ForegroundColor Cyan
-    Write-Host "         WINDOWS CLEAN - LAUNCHER" -ForegroundColor Cyan
+    Write-Host "         WINDOWS DEBLOAT - INIT" -ForegroundColor Cyan
     Write-Host "==========================================" -ForegroundColor Cyan
     Write-Host ""
     Write-Host "1 - Ottimizzazione di sistema" -ForegroundColor Green
@@ -47,11 +47,11 @@ while ($true) {
     $choice = Read-Host "Scegli un'opzione"
 
     switch ($choice.ToUpper()) {
-        "1" { Run-Script "clean.ps1"; Pause }
+        "1" { Run-Script "debloat.ps1"; Pause }
         "2" { Run-Script "restore.ps1"; Pause }
         "3" { Run-Script "maintenance.ps1"; Pause }
         "4" { Run-Script "tools.ps1"; Pause }
-        "Q" { Write-Host "Chiusura launcher..." -ForegroundColor Cyan; Pause; exit }
+        "Q" { Write-Host "Chiusura init..." -ForegroundColor Cyan; Pause; exit }
         Default { Write-Host "Opzione non valida!" -ForegroundColor Yellow; Pause }
     }
 }
