@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/stefanopascazi/CleanWindows/compare/v1.2.1...v1.2.2) (2025-12-10)
+
+
+### Bug Fixes
+
+* aggressive-debloated script ([0b98367](https://github.com/stefanopascazi/CleanWindows/commit/0b98367e3ee2a8661657e92997b5d6378191a97a))
+
 ## [1.2.1](https://github.com/stefanopascazi/CleanWindows/compare/v1.2.0...v1.2.1) (2025-12-10)
 
 
