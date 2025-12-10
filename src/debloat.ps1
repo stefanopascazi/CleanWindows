@@ -312,14 +312,24 @@ while ($true) {
             Pause
         }
         "A" {
-            Write-Host "ATTENZIONE: modalità Aggressive può rimuovere app e disabilitare servizi." -ForegroundColor Red
-            $confirmA = Read-Host "Vuoi procedere? (S o N)"
+            Write-Host "ATTENZIONE: modalità Aggressive può rimuovere app e disabilitare servizi indesiderati." -ForegroundColor Red
+            Write-Host "D - Modalità -DryRun (esegue lo script e genera un report ma non applica nulla. Serve come verifica)" -ForegroundColor Red
+            Write-Host "S - Avvia modalità aggressive" -ForegroundColor Red
+            $confirmA = Read-Host "Scegli un opzione: D o S"
             
             if ($confirmA.ToUpper() -eq "S") {
                 Log "Selezione: Aggressive"
 
                 # Esecuzione script aggressive
                 & "$PSScriptRoot\aggressive-debloated.ps1"
+
+                Write-Host "`nAggressive completata. Riavvia il sistema." -ForegroundColor Green
+                Log "Aggressive completata."
+            } elseif ($confirmA.ToUpper() -eq "D") {
+                Log "Selezione: Aggressive in modalità -DryRun"
+
+                # Esecuzione script aggressive
+                & "$PSScriptRoot\aggressive-debloated.ps1" -DryRun
 
                 Write-Host "`nAggressive completata. Riavvia il sistema." -ForegroundColor Green
                 Log "Aggressive completata."
