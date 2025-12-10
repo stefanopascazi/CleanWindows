@@ -55,3 +55,4 @@ while ($true) {
         Default { Write-Host "Opzione non valida!" -ForegroundColor Yellow; Pause }
     }
 }
+# clean
